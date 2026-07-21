@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nay Lin Phyo — Retail Leader & Speaker</title>
+<meta name="description" content="Nay Lin Phyo went from a shop associate to CEO of the largest convenience store chain in Myanmar — and now turns retail's hardest, most human lessons into keynotes that move whole rooms.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:#f2f1ee;
+    color:#0a0a0a;
+    font-family:Archivo,system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  a:hover{opacity:.65}
+  img{max-width:100%}
+
+  @keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+  @keyframes riseBig{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:none}}
+  @keyframes clipIn{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
+
+  .shell{
+    max-width:1440px;
+    margin:0 auto;
+    background:#f2f1ee;
+    overflow:hidden;
+  }
+
+  /* ---- Nav ---- */
+  .nav{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    border-bottom:1.5px solid #0a0a0a;
+    font:600 12px Archivo;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+  }
+  .nav > *{padding:18px 24px;border-right:1.5px solid #0a0a0a}
+  .nav > *:last-child{border-right:0}
+  .nav .brand{white-space:nowrap}
+  .nav .book{background:#e4341f;color:#fff}
+
+  /* ---- Hero ---- */
+  .hero{
+    display:grid;
+    grid-template-columns:2.2fr 1fr;
+    border-bottom:1.5px solid #0a0a0a;
+  }
+  .hero__main{padding:44px 24px;border-right:1.5px solid #0a0a0a}
+  .hero__eyebrow{
+    display:flex;justify-content:space-between;gap:16px;
+    font:600 12px Archivo;letter-spacing:.1em;text-transform:uppercase;
+    color:#e4341f;margin-bottom:26px;
+  }
+  .hero h1{
+    font-family:'Archivo Black';font-weight:400;
+    font-size:clamp(48px,8.2vw,104px);line-height:.92;letter-spacing:-.03em;
+    text-transform:uppercase;margin:0;animation:riseBig .9s .1s both;
+  }
+  .hero__lede{
+    max-width:560px;font-size:clamp(16px,1.6vw,18px);line-height:1.5;
+    color:#333;margin:26px 0 0;animation:rise .8s .3s both;
+  }
+  .hero__roles{display:flex;flex-direction:column;gap:8px;margin-top:26px;animation:rise .8s .45s both}
+  .hero__role{display:flex;align-items:baseline;gap:12px}
+  .hero__role .arrow{font:700 12px Archivo;color:#e4341f}
+  .hero__role .label{font:600 15px Archivo;letter-spacing:.01em;color:#0a0a0a}
+  .hero__aside{display:flex;flex-direction:column}
+  .hero__photo{flex:1;min-height:320px;overflow:hidden;animation:clipIn 1s .4s both}
+  .hero__photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+  .hero__reel{
+    padding:22px 24px;border-top:1.5px solid #0a0a0a;
+    font:600 13px Archivo;letter-spacing:.06em;text-transform:uppercase;
+    display:flex;justify-content:space-between;
+  }
+
+  /* ---- Stats / retailers ---- */
+  .stats{
+    display:flex;align-items:center;gap:24px;flex-wrap:wrap;
+    padding:24px;border-bottom:1.5px solid #0a0a0a;
+  }
+  .stats__num{display:flex;align-items:center;gap:16px}
+  .stats__num b{font-family:'Archivo Black';font-weight:400;font-size:48px;line-height:.9}
+  .stats__num span{font:600 11px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#666;line-height:1.4}
+  .retailers{display:flex;align-items:center;gap:16px;padding-left:24px;border-left:1.5px solid #0a0a0a}
+  .retailers__label{font:600 10px Archivo;letter-spacing:.12em;text-transform:uppercase;color:#e4341f;line-height:1.3}
+  .retailers__logos{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+  .retailers__logos img{height:52px;width:auto;object-fit:contain;display:block}
+
+  /* ---- Section header ---- */
+  .section{padding:44px 24px;border-bottom:1.5px solid #0a0a0a;scroll-margin-top:12px}
+  .section__head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+  .section__head h2{
+    font-family:'Archivo Black';font-weight:400;
+    font-size:clamp(34px,5vw,56px);text-transform:uppercase;letter-spacing:-.02em;margin:0;
+  }
+  .section__head span{font:600 12px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#666}
+
+  /* ---- Speaking table ---- */
+  .talks{border-top:1.5px solid #0a0a0a}
+  .talk{
+    display:grid;grid-template-columns:60px 1fr 1.4fr 160px;
+    border-bottom:1.5px solid #0a0a0a;align-items:center;
+  }
+  .talks .talk:last-child{border-bottom:0}
+  .talk__id{padding:26px 24px;font-family:'Archivo Black';font-size:20px;color:#e4341f}
+  .talk__title{font-family:'Archivo Black';font-weight:400;font-size:clamp(20px,2.4vw,26px);text-transform:uppercase;margin:0;padding:26px 24px 26px 0}
+  .talk__desc{margin:0;padding:26px 24px;color:#333;font-size:15px;line-height:1.45;border-left:1.5px solid #0a0a0a}
+  .talk__tag{padding:26px 24px;font:600 12px Archivo;letter-spacing:.06em;text-transform:uppercase;border-left:1.5px solid #0a0a0a}
+  .talk--dark{background:#0a0a0a;color:#f2f1ee}
+  .talk--dark .talk__desc{color:#bbb;border-left-color:#3a3a3a}
+  .talk--dark .talk__tag{border-left-color:#3a3a3a}
+
+  /* ---- Watch ---- */
+  .watch{margin-top:38px;border-top:1.5px solid #0a0a0a}
+  .watch__eyebrow{font:600 12px Archivo;letter-spacing:.1em;text-transform:uppercase;color:#e4341f;padding:16px 0 20px}
+  .watch__card{border:1.5px solid #0a0a0a}
+  .watch__thumb{position:relative;display:block;aspect-ratio:16/9;border-bottom:1.5px solid #0a0a0a;overflow:hidden;background:#0a0a0a}
+  .watch__thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .watch__play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+  .watch__play span{width:80px;height:80px;border-radius:50%;background:#e4341f;display:flex;align-items:center;justify-content:center}
+  .watch__play i{width:0;height:0;border-left:26px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+  .watch__meta{padding:22px 24px}
+  .watch__meta h3{font-family:'Archivo Black';font-weight:400;font-size:clamp(22px,2.4vw,26px);text-transform:uppercase;margin:0 0 6px}
+  .watch__meta span{font:600 11px Archivo;letter-spacing:.06em;text-transform:uppercase;color:#666}
+
+  /* ---- About ---- */
+  .about{display:grid;grid-template-columns:1fr 1.6fr;border-bottom:1.5px solid #0a0a0a;scroll-margin-top:12px}
+  .about__photo{min-height:460px;border-right:1.5px solid #0a0a0a;overflow:hidden}
+  .about__photo img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block}
+  .about__body{padding:44px 24px}
+  .about__body h2{font-family:'Archivo Black';font-weight:400;font-size:clamp(34px,5vw,56px);text-transform:uppercase;letter-spacing:-.02em;margin:0 0 24px}
+  .about__lede{font-size:clamp(17px,1.9vw,19px);line-height:1.55;color:#1a1a1a;margin:0 0 16px;max-width:620px}
+  .about__body p:not(.about__lede){font-size:clamp(15px,1.7vw,17px);line-height:1.6;color:#444;margin:0 0 16px;max-width:620px}
+  .about__tags{display:flex;border:1.5px solid #0a0a0a;margin-top:24px;max-width:620px}
+  .about__tags span{flex:1;padding:12px;text-align:center;font:600 12px Archivo;letter-spacing:.06em;text-transform:uppercase;border-right:1.5px solid #0a0a0a}
+  .about__tags span:last-child{border-right:0}
+
+  /* ---- CTA ---- */
+  .cta{background:#e4341f;color:#fff;display:grid;grid-template-columns:1fr auto;align-items:center;padding:56px 24px;gap:24px;scroll-margin-top:12px}
+  .cta h2{font-family:'Archivo Black';font-weight:400;font-size:clamp(40px,6.4vw,72px);text-transform:uppercase;letter-spacing:-.03em;line-height:.9;margin:0}
+  .cta a{white-space:nowrap;font:600 14px Archivo;letter-spacing:.06em;text-transform:uppercase;padding:20px 34px;background:#0a0a0a;color:#fff}
+
+  /* ---- Footer ---- */
+  .footer{display:grid;grid-template-columns:1fr 1fr 1fr;background:#0a0a0a;color:#888;font:600 12px Archivo;letter-spacing:.06em;text-transform:uppercase}
+  .footer > *{padding:20px 24px;border-right:1px solid #333}
+  .footer > *:last-child{border-right:0}
+  .footer .name{color:#fff}
+  .footer .social{display:flex;gap:20px}
+  .footer .copy{text-align:right}
+
+  /* ---- Image fallback placeholders (shown only if the real asset is missing) ---- */
+  .ph{position:relative;background:#0a0a0a}
+  .ph::after{
+    content:attr(data-ph);
+    position:absolute;inset:0;z-index:0;
+    display:flex;align-items:center;justify-content:center;text-align:center;white-space:pre-line;
+    font-family:'Archivo Black';font-size:clamp(28px,4vw,44px);letter-spacing:-.02em;line-height:.95;
+    color:#e4341f;
+    background:
+      radial-gradient(120% 90% at 30% 0%, #2a2a2a 0%, #0a0a0a 60%);
+  }
+  img.img-missing{opacity:0}
+  .logo{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:64px}
+  .logo__txt{display:none;font:800 14px Archivo;letter-spacing:.04em;text-transform:uppercase;color:#0a0a0a;white-space:nowrap}
+  .logo:has(img.img-missing) .logo__txt{display:inline-block}
+
+  /* ---- Responsive ---- */
+  @media(max-width:860px){
+    .nav{grid-template-columns:1fr 1fr}
+    .nav > *{border-bottom:1.5px solid #0a0a0a}
+    .nav .brand{grid-column:1 / -1}
+    .nav > *:nth-child(3){border-right:0}
+    .hero{grid-template-columns:1fr}
+    .hero__main{border-right:0;border-bottom:1.5px solid #0a0a0a}
+    .hero__photo{min-height:60vw}
+    .talk{grid-template-columns:44px 1fr}
+    .talk__desc{grid-column:1 / -1;border-left:0;border-top:1.5px solid #0a0a0a;padding-top:18px}
+    .talk--dark .talk__desc{border-top-color:#3a3a3a}
+    .talk__tag{grid-column:1 / -1;border-left:0;border-top:1.5px solid #0a0a0a;padding-top:14px;padding-bottom:20px}
+    .talk--dark .talk__tag{border-top-color:#3a3a3a}
+    .talk__title{padding-right:24px}
+    .about{grid-template-columns:1fr}
+    .about__photo{border-right:0;border-bottom:1.5px solid #0a0a0a;min-height:70vw}
+    .cta{grid-template-columns:1fr}
+    .cta a{justify-self:start}
+  }
+  @media(max-width:520px){
+    .nav{grid-template-columns:1fr}
+    .nav > *{border-right:0}
+    .footer{grid-template-columns:1fr}
+    .footer > *{border-right:0;border-bottom:1px solid #333}
+    .footer .copy{text-align:left}
+    .retailers{padding-left:0;border-left:0}
+    .about__tags{flex-direction:column}
+    .about__tags span{border-right:0;border-bottom:1.5px solid #0a0a0a}
+    .about__tags span:last-child{border-bottom:0}
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="brand">Nay Lin Phyo</div>
+    <a href="#speaking">Speaking</a>
+    <a href="#about">About</a>
+    <a href="#connect" class="book">Book — 2026 →</a>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero__main">
+      <div class="hero__eyebrow"><span>00 — Retail Leader / Speaker</span><span>Est. 2001</span></div>
+      <h1>Twenty-<br>five years<br>on the floor.</h1>
+      <p class="hero__lede">Nay Lin Phyo went from a shop associate to CEO of the largest convenience store chain in Myanmar — and now turns retail's hardest, most human lessons into keynotes that move whole rooms.</p>
+      <div class="hero__roles">
+        <div class="hero__role"><span class="arrow">→</span><span class="label">CEO of CDSG Retail</span></div>
+        <div class="hero__role"><span class="arrow">→</span><span class="label">Vice President, Myanmar Retailer Association (MMRA)</span></div>
+      </div>
+    </div>
+    <aside class="hero__aside">
+      <div class="hero__photo ph" data-ph="NAY LIN&#10;PHYO"><img src="uploads/pasted-1784608569643-0.png" alt="Nay Lin Phyo portrait"></div>
+      <a href="https://www.youtube.com/watch?v=l0GD2kHW_FI" target="_blank" rel="noopener" class="hero__reel">Watch the reel <span>▶</span></a>
+    </aside>
+  </header>
+
+  <!-- Stats / retailers -->
+  <section class="stats">
+    <div class="stats__num">
+      <b>25</b><span>Years on the retail<br>floor · Est. 2001</span>
+    </div>
+    <div class="retailers">
+      <span class="retailers__label">Retail homes</span>
+      <div class="retailers__logos">
+        <span class="logo"><img src="uploads/pasted-1784608820450-0.png" alt="John Lewis"><span class="logo__txt">John Lewis</span></span>
+        <span class="logo"><img src="uploads/pasted-1784608850177-0.png" alt="Marks &amp; Spencer"><span class="logo__txt">M&amp;S</span></span>
+        <span class="logo"><img src="uploads/co-op.svg" alt="Co-op"><span class="logo__txt">Co-op</span></span>
+        <span class="logo"><img src="uploads/Capital-Logo.png" alt="Capital"><span class="logo__txt">Capital</span></span>
+        <span class="logo"><img src="uploads/G&G-Logo.png" alt="Grab &amp; Go"><span class="logo__txt">Grab &amp; Go</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaking -->
+  <section id="speaking" class="section">
+    <div class="section__head">
+      <h2>01 / Speaking</h2>
+      <span>Keynotes · Workshops · Firesides</span>
+    </div>
+    <div class="talks">
+      <div class="talk">
+        <span class="talk__id">A1</span>
+        <h3 class="talk__title">The Shop Floor Mindset</h3>
+        <p class="talk__desc">Why the best leaders never leave the floor — and how customer obsession compounds into culture.</p>
+        <span class="talk__tag">Keynote · 45m</span>
+      </div>
+      <div class="talk">
+        <span class="talk__id">A2</span>
+        <h3 class="talk__title">Resilience at the Register</h3>
+        <p class="talk__desc">Turning the hardest shift into your sharpest edge — a hands-on session on grit and recovery.</p>
+        <span class="talk__tag">Workshop · ½ day</span>
+      </div>
+      <div class="talk talk--dark">
+        <span class="talk__id">A3</span>
+        <h3 class="talk__title">From a Small Shop, to a Chain Business</h3>
+        <p class="talk__desc">The unglamorous discipline behind hard work.</p>
+        <span class="talk__tag">Fireside · 60m</span>
+      </div>
+      <div class="talk">
+        <span class="talk__id">A4</span>
+        <h3 class="talk__title">Lead From the Front</h3>
+        <p class="talk__desc">What frontline retail taught Nay Lin about leadership that no boardroom ever could.</p>
+        <span class="talk__tag">Keynote · 30m</span>
+      </div>
+    </div>
+
+    <div class="watch">
+      <div class="watch__eyebrow">Watch — Talks &amp; Highlights</div>
+      <a href="https://www.youtube.com/watch?v=l0GD2kHW_FI" target="_blank" rel="noopener" class="watch__card">
+        <span class="watch__thumb">
+          <img src="https://img.youtube.com/vi/l0GD2kHW_FI/maxresdefault.jpg" alt="Nay Lin Phyo — The Shop Floor Mindset">
+          <span class="watch__play"><span><i></i></span></span>
+        </span>
+        <span class="watch__meta">
+          <h3>The Shop Floor Mindset</h3>
+          <span>Keynote · Story of Burma Podcast</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about__photo ph" data-ph="ON&#10;STAGE"><img src="uploads/pasted-1784298654421-0.png" alt="Nay Lin Phyo speaking"></div>
+    <div class="about__body">
+      <h2>02 / About</h2>
+      <p class="about__lede">I started folding shirts on weekends and fell in love with the floor — the pace, the people, the tiny wins that add up to a great day.</p>
+      <p>Twenty-five years later I've led regions, opened flagships, and rebuilt teams after the hardest seasons retail has seen. Now I take that story on stage — not as theory, but as the real, human playbook that turns ordinary shifts into extraordinary careers.</p>
+      <div class="about__tags">
+        <span>Leadership</span>
+        <span>Customer Culture</span>
+        <span>Resilience</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="connect" class="cta">
+    <h2>Connect with<br>Nay Lin Phyo</h2>
+    <a href="mailto:phyo99@gmail.com">Start the conversation →</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span class="name">Nay Lin Phyo</span>
+    <div class="social"><a href="#">IG</a><a href="#">LI</a><a href="mailto:phyo99@gmail.com">Mail</a></div>
+    <span class="copy">© 2026</span>
+  </footer>
+
+</div>
+
+<script>
+  // If an image asset is missing, flag it so its styled fallback shows instead of a broken icon.
+  document.addEventListener('error', function (e) {
+    if (e.target && e.target.tagName === 'IMG') e.target.classList.add('img-missing');
+  }, true);
+</script>
+
+</body>
+</html>
