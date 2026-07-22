@@ -146,6 +146,18 @@
   .about__tags span{flex:1;padding:12px;text-align:center;font:600 12px Archivo;letter-spacing:.06em;text-transform:uppercase;border-right:1.5px solid #0a0a0a}
   .about__tags span:last-child{border-right:0}
 
+  /* ---- Success showcase ---- */
+  .showcase__grid{columns:4;column-gap:0;border-top:1.5px solid #0a0a0a;border-left:1.5px solid #0a0a0a}
+  .showcase__grid figure{
+    margin:0;line-height:0;
+    -webkit-column-break-inside:avoid;page-break-inside:avoid;break-inside:avoid;
+    border-right:1.5px solid #0a0a0a;border-bottom:1.5px solid #0a0a0a;
+  }
+  .showcase__grid img{display:block;width:100%;height:auto}
+  @media(max-width:1100px){.showcase__grid{columns:3}}
+  @media(max-width:720px){.showcase__grid{columns:2}}
+  @media(max-width:480px){.showcase__grid{columns:1}}
+
   /* ---- CTA ---- */
   .cta{background:#e4341f;color:#fff;display:grid;grid-template-columns:1fr auto;align-items:center;padding:56px 24px;gap:24px;scroll-margin-top:12px}
   .cta h2{font-family:'Archivo Black';font-weight:400;font-size:clamp(40px,6.4vw,72px);text-transform:uppercase;letter-spacing:-.03em;line-height:.9;margin:0}
@@ -320,6 +332,24 @@
         <span>Customer Culture</span>
         <span>Resilience</span>
       </div>
+    </div>
+  </section>
+
+  <!-- Success Showcase -->
+  <section id="showcase" class="section">
+    <div class="section__head">
+      <h2>03 / Success Showcase</h2>
+      <span>Moments · Milestones · Recognition</span>
+    </div>
+    <div class="showcase__grid">
+      <figure><img src="uploads/1.jpg" alt="Nay Lin Phyo — success showcase 1" loading="lazy"></figure>
+      <figure><img src="uploads/2.jpg" alt="Nay Lin Phyo — success showcase 2" loading="lazy"></figure>
+      <figure><img src="uploads/3.jpg" alt="Nay Lin Phyo — success showcase 3" loading="lazy"></figure>
+      <figure><img src="uploads/4.jpg" alt="Nay Lin Phyo — success showcase 4" loading="lazy"></figure>
+      <figure><img src="uploads/5.jpg" alt="Nay Lin Phyo — success showcase 5" loading="lazy"></figure>
+      <figure><img src="uploads/6.jpg" alt="Nay Lin Phyo — success showcase 6" loading="lazy"></figure>
+      <figure><img src="uploads/7.jpg" alt="Nay Lin Phyo — success showcase 7" loading="lazy"></figure>
+      <figure><img src="uploads/8.jpg" alt="Nay Lin Phyo — success showcase 8" loading="lazy"></figure>
     </div>
   </section>
 
